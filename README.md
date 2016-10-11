@@ -8,13 +8,19 @@ This example project shows a way to use NSURLProtocol with WKWebView, which was 
 
 # Usage
 
-Drag `NSURLProtocol+WebKitSupport.h` and `NSURLProtocol+WebKitSupport.m` into your project, then
+Drag `NSURLProtocol+WebKitSupport.h` and `NSURLProtocol+WebKitSupport.m` into your project, then register the scheme for NSURLProtocol to handle:
 
 ```objc
-[NSURLProtocol wk_registerScheme:@"https"]; // Register a scheme to WebKit for NSURLProtocol to handle.
-[NSURLProtocol registerClass:[MyURLProtocol class]]; // Use your own NSURLProtocol subclasses as before.
+[NSURLProtocol wk_registerScheme:@"https"];
 
-[NSURLProtocol wb_unregisterScheme:@"https"]; // Remove the scheme from registery.
+// You can now use your own NSURLProtocol subclasses as before.
+[NSURLProtocol registerClass:[MyAwesomeURLProtocol class]];
+```
+
+To remove the scheme from registery:
+
+```objc
+[NSURLProtocol wb_unregisterScheme:@"https"];
 ```
 
 # Note
