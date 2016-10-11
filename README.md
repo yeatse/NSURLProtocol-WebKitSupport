@@ -20,7 +20,7 @@ Drag `NSURLProtocol+WebKitSupport.h` and `NSURLProtocol+WebKitSupport.m` into yo
 To remove the scheme from registery:
 
 ```objc
-[NSURLProtocol wb_unregisterScheme:@"https"];
+[NSURLProtocol wk_unregisterScheme:@"https"];
 ```
 
 # Note
