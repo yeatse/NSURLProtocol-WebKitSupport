@@ -7,13 +7,18 @@
 //
 
 #import "NSURLProtocol+WebKitSupport.h"
+#import <WebKit/WebKit.h>
 
 /**
  * The functions below use some undocumented APIs, which may lead to rejection by Apple.
  */
 
 FOUNDATION_STATIC_INLINE Class ContextControllerClass() {
-    return NSClassFromString(@"WKBrowsingContextController");
+    static Class cls;
+    if (!cls) {
+        cls = [[[WKWebView new] valueForKey:@"browsingContextController"] class];
+    }
+    return cls;
 }
 
 FOUNDATION_STATIC_INLINE SEL RegisterSchemeSelector() {
