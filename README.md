@@ -14,7 +14,7 @@ Drag `NSURLProtocol+WebKitSupport.h` and `NSURLProtocol+WebKitSupport.m` into yo
 [NSURLProtocol wk_registerScheme:@"https"]; // Register a scheme to WebKit for NSURLProtocol to handle.
 [NSURLProtocol registerClass:[MyURLProtocol class]]; // Use your own NSURLProtocol subclasses as before.
 
-[NSURLProtocol wb_unregisterScheme:@"https:"]; // Remove the scheme from registery.
+[NSURLProtocol wb_unregisterScheme:@"https"]; // Remove the scheme from registery.
 ```
 
 # Note
