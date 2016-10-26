@@ -1,6 +1,8 @@
 # NSURLProtocol+WebKitSupport
 
-This example project shows a way to use NSURLProtocol with WKWebView, which was not possible by default.
+[让 WKWebView 支持 NSURLProtocol](https://blog.yeatse.com/2016/10/26/support-nsurlprotocol-in-wkwebview/)
+
+This example project shows a way to use NSURLProtocol with WKWebView, which was not possible before.
 
 # Screenshot
 
@@ -25,4 +27,4 @@ To remove the scheme from registery:
 
 # Note
 
-This category uses undocumented APIs in WebKit. By now I don't know if it will get rejected by Apple, but this is very likely. 
+This category uses undocumented APIs in WebKit. Use at your own risk.
