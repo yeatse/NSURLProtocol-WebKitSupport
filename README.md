@@ -1,5 +1,7 @@
 # NSURLProtocol+WebKitSupport
 
+> Note：If you target iOS 11, you can now use [WKURLSchemeHandler](https://developer.apple.com/documentation/webkit/wkurlschemehandler) to avoid this trick! 😆
+
 [让 WKWebView 支持 NSURLProtocol](https://blog.yeatse.com/2016/10/26/support-nsurlprotocol-in-wkwebview/)
 
 This example project shows a way to use NSURLProtocol with WKWebView, which was not possible before.
